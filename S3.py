@@ -1868,7 +1868,7 @@ class S3(object):
 
         debug("MD5 sums: computed=%s, received=%s" % (md5_computed, md5_from_s3))
         try:
-            md5_from_s3_digest = md5_from_s3.decode('hex')
+            md5_from_s3_digest = md5_from_s3.encode('utf-8').decode('hex')
         except TypeError:
             md5_from_s3_digest = None
         ## when using KMS encryption, MD5 etag value will not match
