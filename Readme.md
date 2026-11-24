@@ -4,9 +4,9 @@ Hardened [GitLab toolbox](https://gitlab.com/gitlab-org/build/CNG/-/tree/master/
 container image for GitLab backup jobs (`gitlab-backup` uploads to object
 storage via the bundled s3cmd).
 
-Default base image: `registry.jihulab.com/gitlab-cn/build/cng-images/gitlab-toolbox-jh:v16.2.11`
+Default base image: `registry.jihulab.com/gitlab-cn/build/cng-images/gitlab-toolbox-jh:v16.3.9`
 (JiHu / 极狐 GitLab). Override at build time with `--build-arg BASE_IMAGE=...`,
-e.g. the official EE image `registry.gitlab.com/gitlab-org/build/cng/gitlab-toolbox-ee:v16.2.11`.
+e.g. the official EE image `registry.gitlab.com/gitlab-org/build/cng/gitlab-toolbox-ee:v16.3.9`.
 
 ## What it patches
 
@@ -49,6 +49,7 @@ byte-compared against the official s3cmd 2.3.0 sdist on PyPI):
 |---|---|---|---|---|
 | `gitlab-toolbox-jh:v16.1.8` | 3.8.16 | 2.3.0 | ✅ | unique, no `.lower()` |
 | `gitlab-toolbox-jh:v16.2.11` | 3.9.17 | 2.3.0 | ✅ | unique, no `.lower()` |
+| `gitlab-toolbox-jh:v16.3.9` | 3.9.17 | 2.3.0 | ✅ | unique, no `.lower()` |
 
 Images are published to `ghcr.io/aiopsclub/gitlab-toolbox-ee` on pushes to
 `main` (`canary` tag) and `v*` tags (release) via GitHub Actions.
