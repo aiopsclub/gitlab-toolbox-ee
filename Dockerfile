@@ -13,7 +13,7 @@
 # image bumps keep every upstream s3cmd fix. Guards make a silent no-op
 # impossible: grep fails the build if upstream ever rewrites the line,
 # py_compile fails it if the sed corrupts the file.
-ARG BASE_IMAGE=registry.jihulab.com/gitlab-cn/build/cng-images/gitlab-toolbox-jh:v16.2.11
+ARG BASE_IMAGE=registry.jihulab.com/gitlab-cn/build/cng-images/gitlab-toolbox-jh:v16.3.9
 FROM ${BASE_IMAGE}
 
 USER root
